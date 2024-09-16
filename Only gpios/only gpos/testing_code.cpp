@@ -1,6 +1,3 @@
-
-//#define _DEBUG
-#include "init.h"
 #include "gpio_cores.h"
 
 
@@ -13,7 +10,9 @@ void led_check(GpoCore *led_p, int n) {
    int i;
 
    for (i = 0; i < n; i++) {
-      led_p->write(1, i);
+
+
+      led_p->write(1);
 
    }
 }

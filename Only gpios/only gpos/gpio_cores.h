@@ -28,7 +28,6 @@ class GpoCore
 
     // function overloading
     void write(uint32_t data);
-    void write(int bit_value, int bit_pos);
 
 };
 
