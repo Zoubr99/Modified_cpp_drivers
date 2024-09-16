@@ -14,7 +14,6 @@ extern "C" {
 // slot module definition
 // format: Slot#_ModuleType_Name
 #define S2_LED       0
-#define S3_SW        1
 
 #ifdef __cplusplus
 } // exetrn "C"

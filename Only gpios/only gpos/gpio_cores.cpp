@@ -2,9 +2,7 @@
 
 #include "gpio_cores.h"
 
-//**********************************************************************/
-//  GpoCore                                                             /
-//**********************************************************************/
+
 GpoCore::GpoCore (uint32_t core_base_addr){
 
     base_addr = core_base_addr;
@@ -29,43 +27,3 @@ void GpoCore::write (int bit_value, int bit_pos) {
     io_write(base_addr, DATA_REG, wr_data);
   //io_write(base_addr, offset, data)   ( *(volatile uint32_t *) ( (base_addr) + 4 * (offset) )  = (data) ) 
 };
-
-
-//**********************************************************************/
-//                                                                      /
-//**********************************************************************/
-
-
-
-
-
-
-
-//**********************************************************************/
-//  GpiCore                                                             /
-//**********************************************************************/
-GpiCore::GpiCore (uint32_t core_base_addr){
-
-    base_addr = core_base_addr;
-
-};
-
-GpiCore::~GpiCore(){};
-
-uint32_t GpiCore::read(){
-          //io_read(base_addr, offset)          ( *(volatile uint32_t *) ( (base_addr) + 4 * (offset) ) )
-    return (io_read(base_addr, DATA_REG));
-
-};
-
-int GpiCore::read(int bit_pos){
-
-    uint32_t rd_data = io_read(base_addr, DATA_REG);
-    return ((int) bit_read(rd_data, bit_pos));
-                //io_read(base_addr, offset)          ( *(volatile uint32_t *) ( (base_addr) + 4 * (offset) ) )
-};
-
-
-//**********************************************************************/
-//                                                                      /
-//**********************************************************************/

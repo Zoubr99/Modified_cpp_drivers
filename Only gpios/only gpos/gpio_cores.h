@@ -33,34 +33,4 @@ class GpoCore
 };
 
 
-// now the GpiCore
-
-class GpiCore
-{
-    // register offset
-    enum{
-
-        DATA_REG = 0
-    };
-
-
-
-    private:
-        uint32_t base_addr;
-
-    public:
-        // Constructor and Destructure
-        GpiCore(uint32_t core_base_adde);
-        ~GpiCore();
-
-        //methods
-        uint32_t read(); // read a 32 bit word
-        int read(int bit_pos);
-
-
-
-
-
-};
-
 #endif
