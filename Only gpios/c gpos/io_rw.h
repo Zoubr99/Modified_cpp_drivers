@@ -66,6 +66,10 @@
 
 #include <inttypes.h> // to use unitN_t type
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 // read macro
 //#define io_read(base_addr, offset)          ( *(volatile uint32_t *) ( (base_addr) + ((offset)<< 2) ) )
 #define io_read(base_addr, offset)          ( *(volatile uint32_t *) ( (base_addr) + ((offset) * 4) ) )
@@ -75,5 +79,10 @@
 //slot addr macro
 //#define get_slot_addr(mmio_base, n_slot)    ( (uint32_t) ((mmio_base) + ((n_slot) << 7) ) )
 #define get_slot_addr(mmio_base, n_slot)    ( (uint32_t) ((mmio_base) + ((n_slot) * 32 * 4) ) ) // 32 regs for each slot * 4 (1 reg is 4 bytes)
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
+
 
 #endif
