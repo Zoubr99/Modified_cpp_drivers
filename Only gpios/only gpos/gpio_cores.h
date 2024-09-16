@@ -1,7 +1,9 @@
 #ifndef _GPIO_H_INCLUDED
 #define _GPIO_H_INCLUDED
 
-#include "init.h"
+#include "io_rw.h"
+#include "io_map.h"
+
 // header file for gpio class defenition
 
 // first GpoCore
