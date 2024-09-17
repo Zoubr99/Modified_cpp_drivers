@@ -1,4 +1,4 @@
-#include "gpio_cores.h"  // Assuming gpio.h contains the C definitions
+#include "gpio_cores.h"  
 
 // Check individual LED
 // led_p: pointer to GpoCore instance
